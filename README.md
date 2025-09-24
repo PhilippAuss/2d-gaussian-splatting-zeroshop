@@ -25,7 +25,15 @@ pip install submodules/simple-knn
 
 # missing pip installs after error
 pip install open3d==0.18.0 mediapy==1.1.2 lpips==0.1.4 scikit-image==0.21.0 tqdm==4.66.2 trimesh==4.3.2 plyfile opencv-python
-
+```
+```bash
+# for pymeshlab postprocessing
+conda create -n postprocess python=3.10 
+conda activate postprocess
+conda install -c conda-forge pymeshlab # https://pypi.org/project/pymeshlab/
+pip install scipy
+conda deactivate
+conda activate surfel_splatting # start with this
 ```
 # Get Started with ZeroSop 2DGS Meshing (first Setup Repo, scroll down)
 ## Run One Example, with masks --> png Files with RGBA (alpha channel)
@@ -45,6 +53,8 @@ https://github.com/St333fan/vggt-zeroshop
 chmod +x process_all_ycbv.sh
 # before processing, adapt the dataset path, segmented/surface, mast3r-sfm/vggt
 ./process_all_ycbv.sh
+
+
 ```
 
 # Original Git --> 2D Gaussian Splatting for Geometrically Accurate Radiance Fields
